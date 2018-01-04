@@ -1,0 +1,32 @@
+#!/bin/sh --
+#
+# $Id: sua-entropy.init 22 2011-08-07 15:07:53Z janj $
+# $HeadURL: svn://svn.it.su.se/sua-entropy/trunk/debian/sua-entropy.init $
+#
+
+. /lib/lsb/init-functions
+
+start()
+{
+    log_action_begin_msg "Starting add-entropyd"
+    /local/entropy/bin/add-entropyd &
+    log_action_end_msg 0
+}
+
+usage()
+{
+    echo "usage: $0 start|stop"
+    exit 1
+}
+
+case "$1" in
+    start)
+	start
+    ;;
+    stop)
+    ;;
+    *)
+	usage
+    ;;
+esac
+

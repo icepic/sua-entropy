@@ -1,0 +1,26 @@
+#!/bin/sh --
+#
+# $Id: add-entropyd 32 2011-08-10 14:37:13Z janj $
+# $HeadURL: svn://svn.it.su.se/sua-entropy/trunk/files/local/entropy/bin/add-entropyd $
+#
+
+sleep=1
+
+while true; do
+    avail=$(cat /proc/sys/kernel/random/entropy_avail)
+    echo "Entropy: ${avail} Sleep: ${sleep}"
+    if [ ${avail} -lt 2048 ]; then
+	nc -q 10 random.it.su.se 4711 | /local/entropy/libexec/add-entropy
+	sleep=$(expr ${sleep} - 1)
+	if [ ${sleep} -lt 1 ]; then
+	    sleep=1
+	fi
+    else
+	sleep=$(expr ${sleep} + 1)
+	if [ ${sleep} -gt 600 ]; then
+	    sleep=600
+	fi
+    fi
+    sleep ${sleep}
+done 2>&1 | logger -t add-entropyd
+
