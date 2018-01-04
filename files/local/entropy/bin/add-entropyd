@@ -1,7 +1,5 @@
 #!/bin/sh --
 #
-# $Id: add-entropyd 32 2011-08-10 14:37:13Z janj $
-# $HeadURL: svn://svn.it.su.se/sua-entropy/trunk/files/local/entropy/bin/add-entropyd $
 #
 
 sleep=1
