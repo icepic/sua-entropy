@@ -1,6 +1,4 @@
 /* 
- * $Id: add-entropy.h 2 2011-08-05 08:39:17Z janj $
- * $HeadURL: svn://svn.it.su.se/sua-entropy/trunk/add-entropy.h $
  *
  * Shove data into dev-random, and bump entropy-avail
  *
