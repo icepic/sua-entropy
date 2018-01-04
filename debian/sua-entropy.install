@@ -1,6 +1,4 @@
 #
-# $Id: sua-entropy.install 11 2011-08-05 11:16:53Z janj $
-# $HeadURL: svn://svn.it.su.se/sua-entropy/trunk/debian/sua-entropy.install $
 #
 files/* /
 #

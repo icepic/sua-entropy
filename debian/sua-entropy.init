@@ -1,7 +1,5 @@
 #!/bin/sh --
 #
-# $Id: sua-entropy.init 22 2011-08-07 15:07:53Z janj $
-# $HeadURL: svn://svn.it.su.se/sua-entropy/trunk/debian/sua-entropy.init $
 #
 
 . /lib/lsb/init-functions

@@ -1,7 +1,5 @@
 #!/usr/bin/make -f
 #
-# $Id: rules 18 2011-08-05 14:44:04Z janj $
-# $HeadURL: svn://svn.it.su.se/sua-entropy/trunk/debian/rules $
 #
 
 DEB_DH_INSTALLINIT_ARGS += --no-start
